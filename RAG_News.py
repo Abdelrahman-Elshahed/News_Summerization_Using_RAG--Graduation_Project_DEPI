@@ -176,15 +176,15 @@ if __name__ == "__main__":
     sports_col = client.get_or_create_collection(name="Sports", embedding_function=sentence_transformer_ef)
     tech_col = client.get_or_create_collection(name="Technology", embedding_function=sentence_transformer_ef)
 
-    add_embeddings(health_col, 'DataBase_ChromaDB\News _Categorization_Files_XML/Health.xml')
-    add_embeddings(science_col, 'DataBase_ChromaDB\News _Categorization_Files_XML/Science.xml')
-    add_embeddings(sports_col, 'DataBase_ChromaDB\News _Categorization_Files_XML/Sports.xml')
-    add_embeddings(tech_col, 'DataBase_ChromaDB\News _Categorization_Files_XML/Technology.xml')
+    add_embeddings(health_col, 'Database/News_Categorization_Files_XML/Health.xml')
+    add_embeddings(science_col, 'Database/News_Categorization_Files_XML/Science.xml')
+    add_embeddings(sports_col, 'Database/News_Categorization_Files_XML/Sports.xml')
+    add_embeddings(tech_col, 'Database/News_Categorization_Files_XML/Technology.xml')
 
     print(health_col.peek())
 
 def get_linksDB(collection_name, prompt) -> list:
-    client = chromadb.PersistentClient(path="DataBase_ChromaDB/data")
+    client = chromadb.PersistentClient(path="Database/DataBase_ChromaDB")
     sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="sentence-transformers/sentence-t5-base")
     collection_name = collection_name.capitalize()
     
