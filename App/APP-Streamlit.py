@@ -79,3 +79,4 @@ if st.button("🔎 Summarize News"):
             st.write("⚠️ Failed to retrieve content from the link.")
     else:
         st.write("⚠️ Please enter valid keywords or a link.")
+
