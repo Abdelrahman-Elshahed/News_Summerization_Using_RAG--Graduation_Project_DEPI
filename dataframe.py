@@ -10,11 +10,9 @@ def load_data_from_xml_files(directory):
             all_data.extend(xml_parser.extract_information())
     return all_data
 
-# Load data from the 'news_xml_files' directory
-directory = 'news_xml_files'  # Update to your actual directory
+directory = 'DataBase_ChromaDB\News _Categorization_Files_XML'  
 data = load_data_from_xml_files(directory)
 
-# Convert the list of dictionaries into a DataFrame
 df = pd.DataFrame(data)
 
 # Check the DataFrame

@@ -171,9 +171,8 @@ async def summarize_news(option: str = Form(...), user_prompt: str = Form(None),
             for link in links:
                 news_content = get_news(link)
 
-                # Ensure news_content is a string
                 if isinstance(news_content, list):
-                    news_content = ' '.join(news_content)  # Join list into a single string
+                    news_content = ' '.join(news_content)  
                 
                 summary = summarizer.generate_summary(news_content)
                 summaries.append({"article": link, "summary": summary[0]['generated_text']})
@@ -183,9 +182,8 @@ async def summarize_news(option: str = Form(...), user_prompt: str = Form(None),
     elif option == "Enter a Link" and user_link:
         news_content = get_news(user_link)
         
-        # Ensure news_content is a string
         if isinstance(news_content, list):
-            news_content = ' '.join(news_content)  # Join list into a single string
+            news_content = ' '.join(news_content)  
 
         if news_content:
             summarizer = TextSummarizationPipeline()
