@@ -261,3 +261,4 @@ async def summarize_news(option: str = Form(...), user_prompt: str = Form(None),
     </html>
     """
 
+
