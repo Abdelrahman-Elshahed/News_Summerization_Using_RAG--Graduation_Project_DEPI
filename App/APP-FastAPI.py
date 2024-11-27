@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, Form
 from fastapi.responses import HTMLResponse
-from RAG_News import categorize, get_linksDB, get_news, get_news_GEN, TextSummarizationPipeline
+from App.RAG_News import categorize, get_linksDB, get_news, get_news_GEN, TextSummarizationPipeline
 
 app = FastAPI()
 

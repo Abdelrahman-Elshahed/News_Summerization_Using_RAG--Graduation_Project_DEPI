@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from RAG_News import XMLParser
+from App.RAG_News import XMLParser
 def load_data_from_xml_files(directory):
     all_data = []
     for filename in os.listdir(directory):

@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-from RAG_News import categorize, get_linksDB, get_news, get_news_GEN, TextSummarizationPipeline
+from App.RAG_News import categorize, get_linksDB, get_news, get_news_GEN, TextSummarizationPipeline
 
 st.title("📰 News Summarization App")
 st.write("Easily summarize news articles based on keywords or by providing a link.")
