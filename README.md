@@ -99,7 +99,8 @@ The **FastAPI app** exposes a backend API to handle summarization requests. It c
 
 
 ## MLflow Integration
-  - Implemented to track experiments and manage model performance.
+  
+  - MLflow is integrated into the news processing pipeline for experiment tracking, model versioning, and performance evaluation. It logs key metrics, hyperparameters, and outputs during model training, while visualizing model improvements over time. Additionally, it tracks model versions and interacts with ChromaDB to store performance and categorization results.
 ![WhatsApp Image 2024-11-27 at 10 09 05 PM](https://github.com/user-attachments/assets/3ffdedf9-a679-4858-a87a-b3e8b613bbb6)
 ![WhatsApp Image 2024-11-27 at 10 45 16 PM](https://github.com/user-attachments/assets/78aabd45-100b-43af-87ee-e645baad2f71)
 ![WhatsApp Image 2024-11-27 at 10 45 10 PM](https://github.com/user-attachments/assets/2066a345-c8d0-4c79-b67c-43d3e816554d)
